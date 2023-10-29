@@ -1,0 +1,19 @@
+﻿<Window x:Class="Bancomat3.RegistroOperazioni"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Registro delle Operazioni" Height="450" Width="800">
+    <Grid>
+        <ListView Name="registroListView" HorizontalAlignment="Left" Height="300" Margin="30,30,30,90" VerticalAlignment="Top" Width="700">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Nome Banca" Width="150" DisplayMemberBinding="{Binding NomeBanca}" />
+                    <GridViewColumn Header="Funzionalità" Width="200" DisplayMemberBinding="{Binding Funzionalita}" />
+                    <GridViewColumn Header="Quantità" Width="100" DisplayMemberBinding="{Binding Quantita}" />
+                    <GridViewColumn Header="Data Operazione" Width="150" DisplayMemberBinding="{Binding DataOperazione}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button Content="INDIETRO" HorizontalAlignment="Left" Height="48" Margin="330,350,0,0" VerticalAlignment="Top" Width="140" FontSize="16" FontFamily="Arial Black" Click="IndietroButton_Click"/>
+    </Grid>
+</Window>
